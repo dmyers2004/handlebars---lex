@@ -1,0 +1,16 @@
+<h1>{{ title }}</h1>
+{{ #each projects }}
+	<h3>{{ name }}</h3>
+	<h4>Assignees</h4>
+	<ul>
+	{{ #each assignees }}
+		<li class="{{#if @first 1}}first{{/if}} {{#if @last 1}}last{{/if}} {{#is_even @index}}even{{else}}odd{{/is_even}}">
+			{{#lex_lowercase size="123" fullname="Don Myers"}}Key:{{@key}} Index:{{@index}} First:{{@first}} Last:{{@last}} {{ name }} of {{ age }}{{/lex_lowercase}}
+		</li>
+	{{ /each }}
+	</ul>
+{{/each}}
+
+<p>{{#blocker}}This is the blocker content{{/blocker}}</p>
+
+<p>{{lex_uppercase foo="456" bar=title}}</p>

@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+{{#each projects}}
+	<h3>{{name}}</h3>
+	<h4>Assignees</h4>
+	<ul>
+	{{#each assignees}}
+		<li>{{name}}</li>
+	{{/each}}
+	</ul>
+{{/each}}

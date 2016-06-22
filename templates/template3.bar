@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+{{ #each projects }}
+	<h3>{{ name }}</h3>
+	<h4>Assignees</h4>
+	<ul>
+	{{ #each assignees }}
+		<li>
+			{{#if_eq @index "2" }}Don Myers{{/if_eq}}
+		</li>
+	{{ /each }}
+	</ul>
+{{/each}}
+{{set name="age" value=title}}
+
+<p>{{get name="age"}}</p>
+
+<p>{{#uppercase}}{{age}}{{/uppercase}}</p>
